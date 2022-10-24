@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../Fonts/Roboto/roboto-regular-webfont.woff);
+    src: url(../Fonts/Roboto/roboto-regular-webfont.woff2);
+    src: url(../Fonts/Roboto/Roboto-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +43,8 @@ body {
 }
 .line-1, .line-2, .line-3{
     width: 60%;
-    border: 2px solid black;
+    height: 4px;
+    background-color: black;
     border-radius: 2px;
     transition: all .5s ease-in-out;
 
@@ -54,29 +63,44 @@ body {
 .active-menu {
     display: block;    
 }
+.menu-area {
+    position: relative;
+    z-index: 10;
+    width: 30vw; 
+    background-color: black;
+    color: aliceblue; 
+
+}
 .menu-background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.menu-area {
-    width: 30vw;    
-    background-color: black;
-    color: aliceblue; 
 
-}
 .active-menu .menu-area{
     animation: 1s menu-slide-reverse;
 }
 .active-menu .menu-area{
     animation: 1s menu-slide;    
 }
+.menu-header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 20px;
+    text-transform: uppercase;
+}
 
 .menu-area-text {
+    margin: 15px;
     list-style: none;
+    font-family: "Roboto";
 }
 .btn-close:hover .line-2 {
     scale: 0;
