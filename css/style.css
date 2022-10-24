@@ -69,6 +69,7 @@ body {
     width: 30vw; 
     background-color: black;
     color: aliceblue; 
+    padding: 10px;
 
 }
 .menu-background {
@@ -101,6 +102,12 @@ body {
     margin: 15px;
     list-style: none;
     font-family: "Roboto";
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform .3s cubic-bezier(.33,-0.04,.71,1.69);
+}
+.menu-area-text:hover {
+    transform: translate(15px, 0);
 }
 .btn-close:hover .line-2 {
     scale: 0;
