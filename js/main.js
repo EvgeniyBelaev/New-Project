@@ -1,10 +1,11 @@
-document.querySelector('#menu-btn').addEventListener('click', showMenu)
-let menu = document.querySelector('#menu')
+const burger = document.querySelector('#burger')
+const container = document.querySelector('.container')
+const main = document.querySelector('#main')
 
-function showMenu() {
-    menu.classList.toggle('active-menu')        
-    menu.classList.toggle('menu')
-    document.querySelector('#menu-btn').classList.toggle('burger')
-    document.querySelector('#menu-btn').classList.toggle('btn-close') 
-    
-}
+
+burger.addEventListener('click', () => {
+    container.classList.toggle('active')
+    burger.classList.toggle('burger')
+    burger.classList.toggle('btn-close')
+    main.classList.toggle('main-active')
+})
