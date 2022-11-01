@@ -27,13 +27,7 @@ function changeBg() {
         })
         
     })
-    const headers = document.querySelectorAll('.header')
-    headers.forEach (header => {
-        header.addEventListener('click', e => {
-            e.preventDefault()
-            container.classList.toggle('active') 
-        })
-    })
+    
     screens.forEach(screen => {
         screen.style.display = 'none'
         screens[0].style.display = 'block'
